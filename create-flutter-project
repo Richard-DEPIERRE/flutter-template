@@ -1,0 +1,13 @@
+#!/bin/bash
+flutter create "$1"
+cd "$1"
+flutter pub add bloc
+flutter pub add flutter_bloc
+flutter pub add hydrated_bloc
+cp -r /home/rdepierre/Documents/flutter/template/lib/core ./lib
+cp -r /home/rdepierre/Documents/flutter/template/lib/data ./lib
+cp -r /home/rdepierre/Documents/flutter/template/lib/logic ./lib
+cp -r /home/rdepierre/Documents/flutter/template/lib/presentation ./lib
+rm -rf ./lib/main.dart
+cp -r /home/rdepierre/Documents/flutter/template/lib/main.dart ./lib
+flutter pub get
